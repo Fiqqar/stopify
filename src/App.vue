@@ -35,7 +35,7 @@
             <i class="material-icons mr-">
               {{ page.icon }}
             </i>
-            <p>{{ page.name }}</p>
+            <p class="hover:opacity-100 text-sm text-white font-semibold">{{ page.name }}</p>
           </button>
         </div>
 
@@ -56,12 +56,30 @@
           <div class="h-px w-full bg-light my-3"></div>
         </div>
         <div class="mx-5">
-          <div v-for="album in albums" class="w-full h-24 overflow-y-scroll"><p class="text-lightest hover:text-white text-xs py-1">{{ album.name }}</p></div>
+          <div v-for="album in albums" class="w-full h-24 overflow-y-scroll"><p class="hover:text-white text-sm text-white font-semibold py-1">{{ album.name }}</p></div>
+        </div>
+        <button class="flex items-center justify-start text-lightest hover:text-white">
+          <i class="material-icons mr-3 rounded-full border border-lightest">arrow_downward</i>
+          <p class="text-sm font-semibold">Install App</p>
+        </button>
+      </div>
+      <div class="relative">
+        <img src="" alt="">
+        <div class="w-full h-full flex justify-end items-start bg-yellow-500 absolute">
+          <div class="bg-black rounded-full h-8 w-8">
+            <i class="material-icons text-white">keyboard_arrow_down</i>
+          </div>
         </div>
       </div>
       <!-- main content -->
        <div class="w-full h-full relative bg-blue-400">
-        <div class="w-full sticky top-0 p-2"></div>
+        <div class="w-full sticky top-0 p-2 flex items-center justify-between">
+          <div class="flex items-center">
+            <button class="rounded-full bg-black w-8 h-8 text-white">
+              <i class="material-icons text-xl"></i>
+            </button>
+          </div>
+        </div>
        </div>
     </div>
     <!-- play bar -->
