@@ -76,23 +76,23 @@
           <div class="h-px w-full bg-light my-3"></div>
         </div>
         <div class="mx-5">
-          <div v-for="album in albums" class="w-full h-20 overflow-y-scroll"><p class="hover:text-white text-sm text-white font-semibold py-1">{{ album.name }}</p></div>
-        </div>
-        <button class="flex items-center justify-start text-gray-300 hover:text-white">
-          <i class="material-symbols-outlined mr-3 rounded-full border border-lightest">arrow_downward</i>
+          <div v-for="album in albums" class="w-full h-10 overflow-y-scroll"><p class="hover:text-white text-sm text-white font-semibold py-1">{{ album.name }}</p></div>
+          <button class="flex items-center justify-start text-gray-300 hover:text-white">
+          <i class="material-symbols-outlined mr-3 rounded-full bo  rder border-lightest">arrow_downward</i>
           <p class="text-sm font-semibold">Install App</p>
-        </button>
-      </div>
-      <div class="relative">
-        <img src="" alt="">
-        <div class="w-full h-full flex justify-end items-start bg-yellow-500 absolute">
-          <div class="bg-black rounded-full h-8 w-8">
+          </button>
+          </div>
+      <div class="relative pt-4">
+        <div class="w-full h-full flex justify-end items-start absolute">
+          <div class="bg-black rounded-full h-6 w-6">
             <i class="material-symbols-outlined text-white">keyboard_arrow_down</i>
           </div>
         </div>
+        <img class="" src="./assets/image/sentimental.jpeg" alt="">
+      </div>
       </div>
       <!-- main content -->
-       <div class="w-full h-full relative bg-zinc-900">
+        <div class="w-full h-full relative bg-zinc-900">
         <div class="w-full sticky top-0 p-2 flex items-center justify-between">
           <div class="flex items-center">
             <button class="rounded-full bg-black w-16 h-11 mr-1 text-white">
@@ -143,17 +143,51 @@
             </div>
           </div>
         </div>
-       </div>
+        </div>
     </div>
     <!-- play bar -->
-     <div class="w-full bg-zinc-900 flex items-center justify-between px-3 h-64">
-      <div class="flex items-center">
-        <h1 class="text-sm text-white tracking-wide">Terlalu Tinggi</h1>
-        <h2 class="text-xs text-white tracking-wide">Juicy Luicy</h2>
-      </div>
-      <i class="material-symbols-outlined text-blue-400 mx-4">favorite</i>
-     </div>
+      <div class="w-full bg-zinc-900 flex items-center justify-between px-3 h-80">
+        <div class="flex items-center">
+          <div>
+            <h1 class="text-sm text-white tracking-wide">Terlalu Tinggi</h1>
+            <h2 class="text-xs text-white tracking-wide">Juicy Luicy</h2>
+          </div>
+          <i class="material-symbols-outlined text-blue-400 mx-4">favorite</i>
+          <i class="material-symbols-outlined text-zinc-400 mx-4">picture_in_picture_alt</i>
+        </div>
+        <div class="flex flex-col justify-center w-1/2 items-center">
+          <div class="flex items-center">
+            <button class="text-lg text-blue-400 hover:text-white ">
+              <i class="material-symbols-outlined">shuffle</i>
+            </button>
+            <button class="text-lg text-zinc-400 hover:text-white ">
+              <i class="material-symbols-outlined ">skip_previous</i>
+            </button>
+            <button class="text-zinc-400 hover:text-white flex items-center ">
+              <i class=" text-2xl material-symbols-outlined ">play_circle</i>
+            </button>
+            <button class="text-lg text-zinc-400 hover:text-white ">
+              <i class="material-symbols-outlined">skip_next</i>
+            </button>
+            <button class="text-lg text-blue-400 hover:text-white ">
+              <i class="material-symbols-outlined ">repeat</i>
+            </button>
+          </div>
+          <div class="w-full">
+            <div class="w-full h-1 bg-zinc-400 rounded-full mt-4">
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <i class="material-symbols-outlined text-zinc-400">playlist_play</i>
+          <i class="material-symbols-outlined text-zinc-400 ml-4">important_devices</i>
+          <i class=" text-2xl material-symbols-outlined text-zinc-400 ml-4">volume_up</i>
+          <div class="w-20 ml-1 bg-zinc-400 rounded-full h-1">
+            
+          </div>
+        </div>
   </div>
+</div>
 </template>
 
 <style scoped>
