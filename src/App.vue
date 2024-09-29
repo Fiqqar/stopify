@@ -34,7 +34,15 @@
           {src: "src/assets/image/themoment.jpeg", title: "The Moment"},
           {src: "src/assets/image/insyaallah.jpeg", title: "Insya Allah"},
           {src: "src/assets/image/sentimentalsideA.jpeg", title: "Sentimental: Side A"}
-        ]
+        ],
+        favorites: [
+          {src: "src/assets/image/juicy.jpeg", title: "Juicy Luicy"},
+          {src: "src/assets/image/bruno.jpeg", title: "Bruno Mars"},
+          {src: "src/assets/image/sheila.jpeg", title: "Sheila On 7"},
+          {src: "src/assets/image/rex.jpeg", title: "Rex Orange Country"},
+          {src: "src/assets/image/coldplay.jpeg", title: "Coldplay"},
+          {src: "src/assets/image/kenny g.jpeg", title: "Kenny G"}
+      ]
       }
     }
   }
@@ -76,7 +84,7 @@
           <div class="h-px w-full bg-light my-3"></div>
         </div>
         <div class="mx-5">
-          <div v-for="album in albums" class="w-full h-10 overflow-y-scroll"><p class="hover:text-white text-sm text-white font-semibold py-1">{{ album.name }}</p></div>
+          <div class="w-full h-10 overflow-y-scroll"><p v-for="album in albums" class="hover:text-white text-sm text-gray-600 font-semibold py-1">{{ album.name }}</p></div>
           <button class="flex items-center justify-start text-gray-300 hover:text-white">
           <i class="material-symbols-outlined mr-3 rounded-full bo  rder border-lightest">arrow_downward</i>
           <p class="text-sm font-semibold">Install App</p>
@@ -92,7 +100,7 @@
       </div>
       </div>
       <!-- main content -->
-        <div class="w-full h-full relative bg-zinc-900">
+        <div class="w-full h-full relative bg-zinc-900 z-0">
         <div class="w-full sticky top-0 p-2 flex items-center justify-between">
           <div class="flex items-center">
             <button class="rounded-full bg-black w-16 h-11 mr-1 text-white">
@@ -143,10 +151,24 @@
             </div>
           </div>
         </div>
+        <div class="px-6 py-3">
+          <div class="pl-2 ">
+            <h1 class="text-2xl font-semibold text-white tracking-wider hover:underline">{{ username }} Favorite's artist</h1>
+            <h2 class="pr-8 pt-4 text-xs text-white uppercase mb-3 tracking-wider hover:underline">Get Better Recommendations the more you listen</h2>
+          </div>
+          <div class="w-full flex flex-wrap">
+            <div v-for="favorite in favorites" class="p-2 w-48 mr-6">
+              <div class="bg-zinc-800 hover:bg-zinc-700 w-50 h-50 p-5 rounded-lg hover:shadow-md hover:shadow-slate-700">
+                <img :src="`${favorite.src}`" alt="" class="h-auto w-full shadow mb-2">
+              <h1 class="text-sm font-semibold text-white tracking-wide">{{ favorite.title }}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
     </div>
     <!-- play bar -->
-      <div class="w-full bg-zinc-900 flex items-center justify-between px-3 h-80">
+      <div class="w-full bg-zinc-800 flex items-center justify-between px-3 h-32 z-50">
         <div class="flex items-center">
           <div>
             <h1 class="text-sm text-white tracking-wide">Terlalu Tinggi</h1>
@@ -157,24 +179,26 @@
         </div>
         <div class="flex flex-col justify-center w-1/2 items-center">
           <div class="flex items-center">
-            <button class="text-lg text-blue-400 hover:text-white ">
+            <button class="bg-zinc-800 text-lg text-blue-400 hover:text-white ">
               <i class="material-symbols-outlined">shuffle</i>
             </button>
-            <button class="text-lg text-zinc-400 hover:text-white ">
+            <button class="bg-zinc-800 text-lg text-zinc-400 hover:text-white ">
               <i class="material-symbols-outlined ">skip_previous</i>
             </button>
-            <button class="text-zinc-400 hover:text-white flex items-center ">
-              <i class=" text-2xl material-symbols-outlined ">play_circle</i>
+            <button class="bg-white border-white  text-zinc-400 hover:text-black flex items-center rounded-full">
+              <i class="  material-symbols-outlined ">play_arrow</i>
             </button>
-            <button class="text-lg text-zinc-400 hover:text-white ">
+            <button class="bg-zinc-800 text-lg text-zinc-400 hover:text-white ">
               <i class="material-symbols-outlined">skip_next</i>
             </button>
-            <button class="text-lg text-blue-400 hover:text-white ">
+            <button class="bg-zinc-800 text-lg text-blue-400 hover:text-white ">
               <i class="material-symbols-outlined ">repeat</i>
             </button>
           </div>
           <div class="w-full">
-            <div class="w-full h-1 bg-zinc-400 rounded-full mt-4">
+            <div class="w-full h-1 bg-zinc-400 rounded-full mt-4 flex items-center">
+              <div class="h-1 rounded-full bg-blue-400 w-1/4"></div>
+              <div class="h-3 w-3 bg-white rounded-full  shadow "></div>
             </div>
           </div>
         </div>
@@ -182,8 +206,9 @@
           <i class="material-symbols-outlined text-zinc-400">playlist_play</i>
           <i class="material-symbols-outlined text-zinc-400 ml-4">important_devices</i>
           <i class=" text-2xl material-symbols-outlined text-zinc-400 ml-4">volume_up</i>
-          <div class="w-20 ml-1 bg-zinc-400 rounded-full h-1">
-            
+          <div class="w-20 ml-1 flex items-center bg-zinc-400 rounded-full h-1">
+            <div class="h-1 rounded-full bg-blue-400 w-1/4"></div>
+            <div class="h-3 w-3 bg-white rounded-full  shadow "></div>
           </div>
         </div>
   </div>
