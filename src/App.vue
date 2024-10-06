@@ -100,7 +100,7 @@
       </div>
       </div>
       <!-- main content -->
-        <div class="w-full h-full relative bg-zinc-900 z-0 overflow-y-scroll">
+        <div class="w-full h-full relative bg-zinc-900 z-0 overflow-hidden hover:overflow-y-auto">
         <div class="w-full sticky top-0 p-2 flex items-center justify-between">
           <div class="flex items-center">
             <button class="rounded-full bg-black w-16 h-11 mr-1 text-white">
